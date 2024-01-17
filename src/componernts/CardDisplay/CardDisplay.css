@@ -1,0 +1,35 @@
+.card {
+    position: relative;
+    border-color:  linear-gradient(90deg, pink, peachpuff, pink);
+    border-radius: 10rem;
+  }
+  
+  .card-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    color: darkslategray;
+  }
+
+  .card-content{
+    color: darkslategray;
+  }
+  
+  .action-button {
+    margin-top: 5px;
+  }
+
+  .delete-button, .edit-button {
+    background-color: white;
+    border: none;
+    color: darkslategray;
+  }
+  
+
+  .space-class{
+    padding: 2.5px;
+  }
+  

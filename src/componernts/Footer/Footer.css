@@ -1,0 +1,13 @@
+footer {
+    background-color: #ffc0cb; /* Pale Pink */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  p {
+    margin: 0;
+  }
+  

@@ -1,0 +1,79 @@
+.popup {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid orange;
+    border-radius: 1px;
+    width: 900px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+ 
+  
+  .form-row {
+    display: flex;
+    flex-direction: row; 
+    margin-bottom: 10px;
+  }
+
+  .form-col {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .form-label {
+    margin-bottom: 5px;
+    color: darkslategray;
+    font-weight: bold;
+  }
+  
+  .form-input {
+    padding: 5px;
+    margin-bottom: 10px; 
+  }
+  
+  
+  .cancel-button,  .add-button,   .close-button, #plus {
+    margin-top: 10px; 
+    padding: 10px 15px;
+    background-color: white; 
+    color: orange; 
+    border: pink;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: white; 
+      color: pink;
+      border:palevioletred;
+    }
+  }
+
+  .cancel-button,  .add-button{
+    font-size: 1.3rem;
+  }
+
+  .close-button, #plus{
+    font-size: 1.8rem;
+  }
+  
+    .form-row-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .phone-input {
+    display: flex;
+  }

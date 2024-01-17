@@ -1,0 +1,27 @@
+.columns-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  .column {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    background-color:white;
+  }
+  
+  .draggable-item {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid pink;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: grab;
+  }
+  
+  .draggable-item:hover {
+    background-color: #f0f0f0;
+  }
+  
