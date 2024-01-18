@@ -14,6 +14,7 @@ const AddForm = ({ onClose, onFormSubmit  }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onFormSubmit(formData);
+    onClose();
   };
     const handleCancel = () => {
         onClose();
@@ -36,7 +37,6 @@ const AddForm = ({ onClose, onFormSubmit  }) => {
           <div className="form-col">
             <label className="form-label" htmlFor="itemPhoneNumber">Phone number:</label>
             <div className="phone-input">
-              <input  style={{ width: '28px' }} className="form-input" type="tel" id="countryCode" name="countryCode" placeholder="+91" />
               <input className="form-input" type="tel" id="phoneNumber" name="phone" placeholder="Phone Number" onChange={handleInputChange} />
             </div>
           </div>
@@ -52,9 +52,7 @@ const AddForm = ({ onClose, onFormSubmit  }) => {
           <div className="form-col">
             <label className="form-label" htmlFor="itemEmail">Email:</label>
             <div className="phone-input">
-            <input className="form-input" type="email" id="itemEmail" name="email" placeholder="mail-id" onChange={handleInputChange}/>
-            <input style={{ width: '70px' }} className="form-input" type="email" id="emailDomain" name="itemEmail" placeholder="@domain" />
-            </div>
+            <input className="form-input" type="email" id="itemEmail" name="email" placeholder="mail-id" onChange={handleInputChange}/>            </div>
           </div>
         </div>
 

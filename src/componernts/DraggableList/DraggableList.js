@@ -4,7 +4,7 @@ import CardDisplay from '../CardDisplay/CardDisplay';
 import { testData } from './testData';
 import './DraggableList.css'; 
 
-const DraggableList = () => {
+const DraggableList = (fdata) => {
 
   // Group data by age 
   const initialColumns = {
@@ -70,6 +70,34 @@ const DraggableList = () => {
       setColumns(storedColumns);
     }
   }, []);
+  useEffect(() => {
+    let temp = fdata;
+    temp=temp.fdata[0];
+    
+    //Add any additional logic you want to perform when fdata is updated
+    if (temp) {
+      // Adding fData to columns
+      let ageGroup;
+      if (temp.age <= 18) {
+        ageGroup = 'under-18';
+      } else if (temp.age >= 19 && temp.age <= 25) {
+        ageGroup = '19-to-25';
+      } else if (temp.age >= 26 && temp.age <= 45) { // Adjusted age range
+        ageGroup = '25-to-45';
+      } else {
+        ageGroup = 'over-45';
+      }
+  
+      // Update the state using a callback function to avoid infinite loop
+      setColumns((prevColumns) => {
+        const updatedColumns = {
+          ...prevColumns,
+          [ageGroup]: [...prevColumns[ageGroup], temp],
+        };
+        return updatedColumns;
+      });
+    }
+  }, [fdata]);
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>

@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import AddForm from '../AddForm/AddForm';
 import './Header.css';
 
-const Header = () => {
-    const [isFormOpen, setIsFormOpen] = useState(false);
+const Header = ({ onCardDataChange }) => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+    
     
 
     const handleOpenForm = () => {
@@ -15,9 +16,7 @@ const Header = () => {
       setIsFormOpen(false);
     };
 
-    const handleFormSubmit = (formData) => {
-        console.log(formData);
-      };
+  
 
   return (
     <header className="header-container">
@@ -25,7 +24,7 @@ const Header = () => {
       <button className="addButton" onClick={handleOpenForm}>
         + Add
       </button>
-      {isFormOpen && <AddForm onClose={handleCloseForm} onFormSubmit={handleFormSubmit} />}
+      {isFormOpen && <AddForm onClose={handleCloseForm} onFormSubmit={onCardDataChange} />}
     </header>
   );
 };
