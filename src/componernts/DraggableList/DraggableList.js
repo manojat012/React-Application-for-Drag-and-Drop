@@ -84,7 +84,7 @@ const DraggableList = (fdata) => {
         ageGroup = '19-to-25';
       } else if (temp.age >= 26 && temp.age <= 45) { // Adjusted age range
         ageGroup = '25-to-45';
-      } else {
+      } else if(temp.age > 45){
         ageGroup = 'over-45';
       }
   
